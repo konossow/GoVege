@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/rating5"
+        android:layout_width="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:src="@android:drawable/star_big_on"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/openNowTextView" />
+
+    <ImageView
+        android:id="@+id/rating1"
+        android:layout_width="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="8dp"
+        android:src="@android:drawable/star_big_on"
+        app:layout_constraintRight_toLeftOf="@+id/rating2"
+        app:layout_constraintTop_toBottomOf="@+id/openNowTextView" />
+
+    <ImageView
+        android:id="@+id/rating2"
+        android:layout_width="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="8dp"
+        android:src="@android:drawable/star_big_on"
+        app:layout_constraintRight_toLeftOf="@+id/rating3"
+        app:layout_constraintTop_toBottomOf="@+id/openNowTextView" />
+
+    <ImageView
+        android:id="@+id/rating4"
+        android:layout_width="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="8dp"
+        android:src="@android:drawable/star_big_on"
+        app:layout_constraintRight_toLeftOf="@+id/rating5"
+        app:layout_constraintTop_toBottomOf="@+id/openNowTextView" />
+
+    <ImageView
+        android:id="@+id/rating3"
+        android:layout_width="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="8dp"
+        android:src="@android:drawable/star_big_on"
+        app:layout_constraintRight_toLeftOf="@+id/rating4"
+        app:layout_constraintTop_toBottomOf="@+id/openNowTextView" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Place name"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/distanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="(Xkm away)"
+        app:layout_constraintLeft_toRightOf="@+id/nameTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:text="Place address"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+    <TextView
+        android:id="@+id/openNowTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:text="open/closed"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
