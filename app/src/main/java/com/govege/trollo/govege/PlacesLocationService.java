@@ -23,8 +23,10 @@ public class PlacesLocationService {
 
     public Location getLocation(){
         android.location.Location location = placesLocationListener.getLocation();
-        currentLocation.setLatitude(location.getLatitude());
-        currentLocation.setLongitude(location.getLongitude());
+        if(location != null) {
+            currentLocation.setLatitude(location.getLatitude());
+            currentLocation.setLongitude(location.getLongitude());
+        }
         return currentLocation;
     }
 }
