@@ -58,6 +58,6 @@ public class PlacesArrayAdapter extends ArrayAdapter {
     }
 
     private String prepareDistanceText(Place place) {
-        return "(" + ((MainActivity)context).getCurrentLocation().calculateDistance(place.getLocation()) + " km away)";
+        return "(" + (String.format("%.2f", ((MainActivity)context).getCurrentLocation().calculateDistance(place.getLocation()))) + " km away)";
     }
 }

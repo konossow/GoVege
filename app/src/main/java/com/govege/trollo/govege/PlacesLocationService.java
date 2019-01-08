@@ -1,6 +1,7 @@
 package com.govege.trollo.govege;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
@@ -14,6 +15,7 @@ public class PlacesLocationService {
     private PlacesLocationListener placesLocationListener;
     private Location currentLocation;
 
+    @SuppressLint("MissingPermission")
     public PlacesLocationService(Context context) {
         this.locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
         this.placesLocationListener = new PlacesLocationListener(this);

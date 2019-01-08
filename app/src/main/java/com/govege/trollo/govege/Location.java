@@ -48,8 +48,23 @@ public class Location implements Serializable{
     }
 
     public double calculateDistance(Location anotherLocation){
-        double distance = 7;
+
+        double lat1 = this.latitude;
+        double lon1 = this.longitude;
+        double lat2 = anotherLocation.getLatitude();
+        double lon2 = anotherLocation.getLongitude();
         //TO DO algorytm obliczania odległości między dwoma lokacjami (Klaudia)
-        return distance;
+
+        double earthRadius = 6371;
+        double latDiff = Math.toRadians(lat2-lat1);
+        double lngDiff = Math.toRadians(lon2-lon1);
+        double a = Math.sin(latDiff /2) * Math.sin(latDiff /2) +
+                Math.cos(Math.toRadians(lat1))*
+                        Math.cos(Math.toRadians(lat2))* Math.sin(lngDiff /2) *
+                        Math.sin(lngDiff /2);
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+        return earthRadius * c;
     }
 }
+
